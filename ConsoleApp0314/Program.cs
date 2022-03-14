@@ -33,6 +33,31 @@ namespace ConsoleApp0314
                 }
                 Console.WriteLine();
             }
+            //成績練習
+            int[] number = { 1, 2, 3, 4, 5 };
+            string[] name = { "Jack", "Mary", "Tom", "Grace", "Alice" };
+            int[] comScore = { 80, 65, 100, 98, 83 };
+            int[]proScore = { 75, 67, 93, 25, 82 };
+            int[] aniScore = { 60, 62, 91, 50, 87 };
+            while (true)
+            {
+                Console.WriteLine("請輸入座號(1~5):");
+                var input = Console.ReadLine();
+                int inputStudentNo = int.Parse(input);
+                int arrayInder = Array.IndexOf(number, inputStudentNo);
+                if (arrayInder > -1)
+                {
+                    Console.WriteLine("姓名:" + name[arrayInder]);
+                    Console.WriteLine("電腦概論:" + comScore[arrayInder]);
+                    Console.WriteLine("程式設計:" + proScore[arrayInder]);
+                    Console.WriteLine("動畫設計:" + aniScore[arrayInder]);
+                }
+                else
+                {
+                    Console.WriteLine("查無座號..");
+                }
+              
+            }
         }
 
 
